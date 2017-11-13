@@ -18,4 +18,4 @@ Met de `run.sh` wordt poort 8080 geopend.
 
 ## Start met Docker
 
-Zie `Makfile`.
+Zie `Makefile`.
