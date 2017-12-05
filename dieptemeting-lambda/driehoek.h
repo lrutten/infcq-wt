@@ -11,6 +11,7 @@
 
 class Driehoek
 {
+friend class Vaart;
 public:
    Punt *p1;
    Punt *p2;

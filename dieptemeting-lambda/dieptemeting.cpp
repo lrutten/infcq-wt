@@ -56,6 +56,20 @@ void DVenster::maakvaart()
    v->maakstroken();
    v->berekenminmax();
 //   v->toon();
+   int n = 0;
+   v->voorAlleDriehoeken(
+      
+      [&n](Driehoek *s)
+      {
+         if (n < 5)
+         {
+            s->toon(0);
+         }
+         
+         n++;
+      }
+   );
+   
 }
 
 
@@ -144,8 +158,16 @@ void DVenster::paintEvent( QPaintEvent * )
     double minz = v->getminz();
     double maxz = v->getmaxz();
 
-    // teken het kanaal    
-    v->teken(&p, minz, maxz);
+   // teken het kanaal    
+   //v->teken(&p, minz, maxz);
+
+   v->voorAlleDriehoeken(
+      [&p, minz, maxz](Driehoek *s)
+      {
+         // s->toon(0);
+         s->teken(&p, minz, maxz);
+      }
+   );
     
     // herstel de instellingen van de qpainter
     p.restore();
