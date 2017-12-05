@@ -2,6 +2,7 @@
 #define VAART_H
 
 #include <vector>
+#include <functional>
 
 #include <qpainter.h>
 #include "meting.h"
@@ -36,7 +37,7 @@ public:
    void maakstroken();
    void berekenminmax();
    void teken(QPainter *qp, double minz, double maxz);
-   
+   void voorAlleDriehoeken(std::function<void(Driehoek*)> doe);
    
    double getminx()
    {

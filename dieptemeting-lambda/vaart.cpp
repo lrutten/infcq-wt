@@ -2,6 +2,8 @@
 #include "vaart.h"
 #include "insprong.h"
 
+#include <functional>
+
 // $Date$
 // $Author$
 // $Revision$
@@ -53,6 +55,20 @@ void Vaart::toon(int d)
    for (unsigned int i = 0; i<stroken.size(); i++)
    {
       stroken[i]->toon(d + 1);
+   }
+}
+
+void Vaart::voorAlleDriehoeken(std::function<void(Driehoek*)> doe)
+{
+   for (unsigned int i = 0; i<stroken.size(); i++)
+   {
+      Strook *s = stroken[i];
+      
+      for (unsigned int j=0; j<s->driehoeken.size(); j++)
+      {
+         Driehoek *d = s->driehoeken[j];
+         doe(d);
+      }
    }
 }
 

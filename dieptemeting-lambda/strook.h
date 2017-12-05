@@ -13,6 +13,7 @@
 
 class Strook
 {
+friend class Vaart;
 private:
    std::vector<Driehoek *> driehoeken;
    
