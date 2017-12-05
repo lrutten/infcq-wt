@@ -16,6 +16,6 @@ Dit zijn een aantal Wt in Docker demo's.
     In deze versie is het tekenen uigebreid met een actorsysteem.
     Hierdoor verschijnt het tekenwerk van een tab in alle andere tabs.
     Voor elke nieuwe tab in de browser wordt een nieuwe thread gestart. Elk
-    thread gedraagt zicht als een actor die berichten naar de andere actors kan sturen.
+    thread gedraagt zich als een actor die berichten naar de andere actors kan sturen.
 
 
