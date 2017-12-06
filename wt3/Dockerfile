@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu
 MAINTAINER Leo Rutten "leo.rutten@kuleuven.be"
 RUN apt-get update
 RUN apt-get install -y witty witty-dev witty-doc witty-dbg witty-examples
