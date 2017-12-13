@@ -56,6 +56,20 @@ void Vaart::toon(int d)
    }
 }
 
+void Vaart::voorAlleDriehoeken(std::function<void(Driehoek *)> doe)
+{
+   for (unsigned int i = 0; i<stroken.size(); i++)
+   {
+      Strook *s = stroken[i];
+      for (unsigned int j = 0; j<s->driehoeken.size(); j++)
+      {
+         Driehoek *d = s->driehoeken[j];
+         doe(d);
+      }
+   }
+}
+
+
 int Vaart::isleeg(char *bf)
 {
 	int ntekens = 0;
