@@ -132,6 +132,8 @@ void DVenster::paintEvent( QPaintEvent * )
     
     
     // de vier hoekpunten
+    /*
+      worden niet gebruikt
     int x1 = xk;
     int y1 = yk;
     int x2 = xk + bk;
@@ -140,6 +142,7 @@ void DVenster::paintEvent( QPaintEvent * )
     int y3 = yk + hk;
     int x4 = xk;
     int y4 = yk + hk;
+     */
     
     // diagonaal, alleen voor de test van viewport
   /*  
@@ -178,7 +181,7 @@ void DVenster::paintEvent( QPaintEvent * )
 void Vaart::teken(QPainter *qp, double minz, double maxz)
 {
    // teken alle stroken
-   for (int i=0; i<stroken.size(); i++)
+   for (unsigned int i=0; i<stroken.size(); i++)
    {
       stroken[i]->teken(qp, minz, maxz);
    }
@@ -187,7 +190,7 @@ void Vaart::teken(QPainter *qp, double minz, double maxz)
 void Strook::teken(QPainter *qp, double minz, double maxz)
 {
    // teken alle driehoeken
-   for (int i=0; i<driehoeken.size(); i++)
+   for (unsigned int i=0; i<driehoeken.size(); i++)
    {
       driehoeken[i]->teken(qp, minz, maxz);
    }

@@ -32,7 +32,7 @@ public:
    void voegmetingbij(Meting *m);
    void voegstrookbij(Strook *m);
    void toon(int d = 0);
-   void leesbestand(char *naam);
+   void leesbestand(const char *naam);
    int  isleeg(char *bf);
    void maakstroken();
    void berekenminmax();

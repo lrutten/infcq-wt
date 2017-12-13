@@ -20,7 +20,7 @@ void Strook::toon(int d)
 {
    Insprong::springin(d);
    printf("Strook\n");
-   for (int i = 0; i<driehoeken.size(); i++)
+   for (unsigned int i = 0; i<driehoeken.size(); i++)
    {
       driehoeken[i]->toon(d + 1);
    }

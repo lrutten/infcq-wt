@@ -83,7 +83,7 @@ int Vaart::isleeg(char *bf)
 }
 
 
-void Vaart::leesbestand(char *naam)
+void Vaart::leesbestand(const char *naam)
 {
 	char buf[1000];
 	FILE *f;
